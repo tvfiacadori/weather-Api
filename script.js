@@ -1,7 +1,7 @@
 
 // Variaveis e seleção de elementos 
 
-const apiKey = "f9fc3d576d0e4a0582c1c877db40b725";
+const apiKey = "";
 const apiCountryURL = "https://countryflagsapi.com/png/";
 const apiUnsplash = "https://source.unsplash.com/1600x900/?";
 const weather = "https://openweathermap.org/img/wn/01d.png";
