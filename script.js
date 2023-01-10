@@ -30,7 +30,7 @@ const toggleLoader = () => {
   loader.classList.toggle("hide");
 };
 
-// Funções
+// Les fonctions
 const getWeatherData = async (city) => {
   toggleLoader();
 
@@ -45,7 +45,7 @@ const getWeatherData = async (city) => {
 
 };
 
-// Tratamento de erro
+// La gestion des erreurs
 const showErrorMessage = () => {
   errorMessageContainer.classList.remove("hide");
 };
@@ -63,14 +63,14 @@ const showWeatherData = async (city) => {
 
   const data = await getWeatherData(city);
 
-  // definição de msg de erro
+  // Définition du message d'erreur
 
   if (data.cod === "404") {
     showErrorMessage();
     return;
   }
 
-  // troca de dados
+  // L'échange de données
 
   cityElement.innerText = data.name;
   tempElement.innerText = parseInt(data.main.temp);
@@ -91,7 +91,7 @@ const showWeatherData = async (city) => {
 };
 
 
-// Eventos
+// Event
 
 searchBtn.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -102,7 +102,7 @@ searchBtn.addEventListener("click", async (e) => {
 });
 
 
-// Ação para funcionar com o enter do teclado
+// Action pour travailler avec le clavier entrer
 
 cityInput.addEventListener("keyup", (e) => {
   if (e.code === "Enter") {
@@ -112,7 +112,7 @@ cityInput.addEventListener("keyup", (e) => {
     }
 });
 
-// Sugestões
+// Suggestions
 suggestionButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const city = btn.getAttribute("id");
